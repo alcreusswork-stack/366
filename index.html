@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JPCスポーツ教室 一宮尾西店｜体幹特化・プロ指導の子どもスポーツ教室</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF6B35;
+      --orange-light: #FF8C5A;
+      --orange-pale: #FFF0EB;
+      --blue: #29B6D8;
+      --blue-dark: #1E8FA8;
+      --navy: #1A2B4A;
+      --navy-light: #253A5E;
+      --yellow: #FFD60A;
+      --white: #FFFFFF;
+      --gray-bg: #F6F8FA;
+      --gray-text: #555;
+      --text: #1A2B4A;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ========== HEADER ========== */
+    .header {
+      background: var(--navy);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .header__logo a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--white);
+    }
+
+    .header__logo-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--orange);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 900;
+      font-size: 14px;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+
+    .header__name {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .header__name small {
+      display: block;
+      font-size: 10px;
+      font-weight: 400;
+      opacity: 0.75;
+      letter-spacing: 0.05em;
+    }
+
+    .header__cta a {
+      background: var(--orange);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 50px;
+      white-space: nowrap;
+      display: inline-block;
+      transition: background 0.2s;
+    }
+
+    .header__cta a:hover { background: var(--orange-light); }
+
+    /* ========== HERO IMAGE ========== */
+    .hero-image {
+      width: 100%;
+      overflow: hidden;
+      max-height: 520px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    /* ========== HERO TEXT ========== */
+    .hero-text {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 48px 20px 56px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-text::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      background: var(--orange);
+      border-radius: 50%;
+      opacity: 0.12;
+    }
+
+    .hero-text::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; left: -40px;
+      width: 160px; height: 160px;
+      background: var(--blue);
+      border-radius: 50%;
+      opacity: 0.15;
+    }
+
+    .hero-text__badge {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 16px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-text__catch {
+      font-size: clamp(24px, 6vw, 40px);
+      font-weight: 900;
+      line-height: 1.35;
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-text__catch em {
+      font-style: normal;
+      color: var(--yellow);
+    }
+
+    .hero-text__sub {
+      font-size: clamp(13px, 3.5vw, 16px);
+      opacity: 0.88;
+      margin-bottom: 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-text__cta-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 700;
+      padding: 16px 36px;
+      border-radius: 50px;
+      box-shadow: 0 4px 16px rgba(255,107,53,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-align: center;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,107,53,0.45); }
+
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 12px 28px;
+      border-radius: 50px;
+      border: 2px solid rgba(255,255,255,0.5);
+      transition: border-color 0.2s, background 0.2s;
+      text-align: center;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .btn-secondary:hover { border-color: white; background: rgba(255,255,255,0.1); }
+
+    /* ========== SECTION COMMON ========== */
+    .section { padding: 64px 20px; }
+    .section--gray { background: var(--gray-bg); }
+
+    .section__label {
+      display: inline-block;
+      font-family: 'Poppins', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--orange);
+      letter-spacing: 0.12em;
+      margin-bottom: 8px;
+    }
+
+    .section__title {
+      font-size: clamp(22px, 5.5vw, 32px);
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .section__desc {
+      font-size: 14px;
+      color: var(--gray-text);
+      margin-bottom: 36px;
+      max-width: 560px;
+    }
+
+    /* ========== FEATURE NUMBERS ========== */
+    .numbers {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      max-width: 700px;
+      margin: 0 auto 48px;
+    }
+
+    .number-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 20px 10px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      border-top: 4px solid var(--orange);
+    }
+
+    .number-card:nth-child(2) { border-top-color: var(--blue); }
+    .number-card:nth-child(3) { border-top-color: var(--yellow); }
+
+    .number-card__num {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(28px, 7vw, 44px);
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    .number-card__unit {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--orange);
+    }
+
+    .number-card:nth-child(2) .number-card__unit { color: var(--blue); }
+    .number-card:nth-child(3) .number-card__unit { color: #CCA800; }
+
+    .number-card__label {
+      font-size: 11px;
+      color: var(--gray-text);
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    /* ========== STRENGTHS ========== */
+    .strength-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .strength-item {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 24px 20px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border-left: 5px solid var(--orange);
+    }
+
+    .strength-item:nth-child(2) { border-left-color: var(--blue); }
+    .strength-item:nth-child(3) { border-left-color: var(--navy); }
+
+    .strength-item__icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--orange-pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+
+    .strength-item:nth-child(2) .strength-item__icon { background: #E8F7FA; }
+    .strength-item:nth-child(3) .strength-item__icon { background: #EDF0F5; }
+
+    .strength-item__title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .strength-item__text {
+      font-size: 13px;
+      color: var(--gray-text);
+      line-height: 1.7;
+    }
+
+    /* ========== SERVICES (ICHIOSHO) ========== */
+    .service-hero {
+      background: linear-gradient(135deg, var(--orange) 0%, #FF8C5A 100%);
+      border-radius: 20px;
+      padding: 28px 24px;
+      color: var(--white);
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-hero::after {
+      content: '★';
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 80px;
+      opacity: 0.15;
+    }
+
+    .service-hero__badge {
+      background: var(--yellow);
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 12px;
+      border-radius: 50px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .service-hero__title {
+      font-size: clamp(18px, 5vw, 24px);
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .service-hero__text {
+      font-size: 13px;
+      opacity: 0.95;
+      line-height: 1.7;
+    }
+
+    .service-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 20px 18px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    }
+
+    .service-card__icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--orange-pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .service-card__title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .service-card__text {
+      font-size: 12px;
+      color: var(--gray-text);
+      line-height: 1.65;
+    }
+
+    /* ========== COMING SOON ========== */
+    .coming-soon {
+      background: linear-gradient(135deg, #F0F8FF 0%, #E8F4F8 100%);
+      border-radius: 14px;
+      padding: 20px 20px;
+      border: 2px dashed var(--blue);
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .coming-soon__badge {
+      background: var(--blue);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .coming-soon__text {
+      font-size: 13px;
+      color: var(--navy);
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    /* ========== STORY ========== */
+    .story {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 20px;
+      padding: 36px 24px;
+      max-width: 640px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .story::before {
+      content: '"';
+      position: absolute;
+      top: -10px; left: 16px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 120px;
+      color: var(--orange);
+      opacity: 0.3;
+      line-height: 1;
+    }
+
+    .story__name {
+      font-size: 13px;
+      color: var(--blue);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .story__title {
+      font-size: clamp(18px, 5vw, 22px);
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1.4;
+      position: relative;
+      z-index: 1;
+    }
+
+    .story__text {
+      font-size: 13px;
+      opacity: 0.9;
+      line-height: 1.8;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ========== REVIEWS ========== */
+    .review-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .review-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 22px 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      position: relative;
+    }
+
+    .review-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      border-radius: 16px 16px 0 0;
+      background: linear-gradient(90deg, var(--orange), var(--blue));
+    }
+
+    .review-stars {
+      color: var(--orange);
+      font-size: 18px;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    .review-text {
+      font-size: 13px;
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    /* ========== FREE TRIAL ========== */
+    .trial-section {
+      background: linear-gradient(135deg, var(--orange) 0%, #FF8C5A 40%, var(--blue) 100%);
+      text-align: center;
+      color: var(--white);
+      padding: 64px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .trial-section::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 260px; height: 260px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+    }
+
+    .trial-section::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: -60px;
+      width: 200px; height: 200px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
+    }
+
+    .trial-section__badge {
+      background: var(--yellow);
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 20px;
+      border-radius: 50px;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    .trial-section__title {
+      font-size: clamp(22px, 6vw, 36px);
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .trial-section__sub {
+      font-size: 14px;
+      opacity: 0.9;
+      margin-bottom: 32px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .trial-section__btn {
+      display: inline-block;
+      background: var(--white);
+      color: var(--orange);
+      font-size: 18px;
+      font-weight: 900;
+      padding: 18px 40px;
+      border-radius: 50px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+      position: relative;
+      z-index: 1;
+    }
+
+    .trial-section__btn:hover { transform: translateY(-3px); }
+
+    .trial-section__note {
+      font-size: 12px;
+      opacity: 0.8;
+      margin-top: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ========== INFO ========== */
+    .info-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 640px;
+      margin: 0 auto;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+
+    .info-row {
+      display: flex;
+      background: var(--white);
+      border-bottom: 1px solid #EEE;
+    }
+
+    .info-row:last-child { border-bottom: none; }
+
+    .info-row__label {
+      background: var(--navy);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 14px 12px;
+      min-width: 90px;
+      display: flex;
+      align-items: center;
+    }
+
+    .info-row__value {
+      font-size: 13px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      flex: 1;
+    }
+
+    .info-row__value a {
+      color: var(--blue-dark);
+      font-weight: 500;
+      word-break: break-all;
+    }
+
+    /* ========== SNS ========== */
+    .sns-area {
+      text-align: center;
+      margin-top: 32px;
+    }
+
+    .sns-area__title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    .sns-icons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .sns-icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      color: var(--gray-text);
+      transition: transform 0.2s;
+    }
+
+    .sns-icon:hover { transform: translateY(-2px); }
+
+    .sns-icon svg {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+    }
+
+    /* ========== MAP ========== */
+    .map-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      margin-bottom: 16px;
+    }
+
+    .map-wrap iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      display: block;
+    }
+
+    .map-btn-wrap {
+      text-align: center;
+    }
+
+    .btn-map {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 13px 28px;
+      border-radius: 50px;
+      transition: background 0.2s;
+    }
+
+    .btn-map:hover { background: var(--navy-light); }
+
+    /* ========== FOOTER ========== */
+    .footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      padding: 40px 20px 28px;
+    }
+
+    .footer__logo {
+      font-size: 16px;
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .footer__links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .footer__links a {
+      font-size: 12px;
+      color: rgba(255,255,255,0.65);
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 1px;
+      transition: color 0.2s;
+    }
+
+    .footer__links a:hover { color: var(--white); }
+
+    .footer__official {
+      margin-bottom: 16px;
+    }
+
+    .footer__official a {
+      display: inline-block;
+      background: rgba(255,255,255,0.1);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 8px 20px;
+      border-radius: 50px;
+      border: 1px solid rgba(255,255,255,0.25);
+      transition: background 0.2s;
+    }
+
+    .footer__official a:hover { background: rgba(255,255,255,0.18); }
+
+    .footer__copy {
+      font-size: 11px;
+      opacity: 0.5;
+    }
+
+    /* ========== FLOATING CTA ========== */
+    .float-cta {
+      position: fixed;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 32px);
+      max-width: 400px;
+      background: var(--orange);
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+      padding: 16px;
+      border-radius: 50px;
+      box-shadow: 0 6px 24px rgba(255,107,53,0.5);
+      z-index: 100;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .float-cta:hover {
+      transform: translateX(-50%) translateY(-2px);
+      box-shadow: 0 10px 30px rgba(255,107,53,0.55);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (min-width: 600px) {
+      .numbers {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .service-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-text__cta-wrap {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .btn-primary, .btn-secondary { width: auto; }
+
+      .map-wrap iframe { height: 380px; }
+    }
+
+    @media (min-width: 768px) {
+      .header__name { font-size: 16px; }
+      .header__name small { font-size: 11px; }
+
+      .strength-list, .review-cards { margin: 0 auto; }
+
+      .section { padding: 80px 40px; }
+    }
+
+    @media (max-width: 599px) {
+      body { padding-bottom: 80px; }
+    }
+
+    @media (min-width: 600px) {
+      .float-cta { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__logo">
+      <a href="https://jpc-sports.com/bisai/" target="_blank" rel="noopener noreferrer">
+        <div class="header__logo-icon">JPC</div>
+        <div class="header__name">
+          <small>JPCスポーツ教室</small>
+          一宮尾西店
+        </div>
+      </a>
+    </div>
+    <div class="header__cta">
+      <a href="https://liff-gateway.lineml.jp/landing?follow=%40495unzuf&lp=eZDkgE&liff_id=2005715454-1Bw8NW59" target="_blank" rel="noopener noreferrer">無料体験を申込む</a>
+    </div>
+  </header>
+
+  <!-- HERO IMAGE -->
+  <div class="hero-image">
+    <img src="images/hero.jpg" alt="JPCスポーツ教室 一宮尾西店 子どもたちが楽しく体を動かす様子">
+  </div>
+
+  <!-- HERO TEXT -->
+  <section class="hero-text">
+    <span class="hero-text__badge">愛知県一宮市・尾西エリア</span>
+    <h1 class="hero-text__catch">
+      「できた！」が<br>
+      子どもの<em>自信</em>になる。
+    </h1>
+    <p class="hero-text__sub">
+      体幹特化プログラム×身体のプロによる専門指導で<br>
+      運動の苦手を「大好き」に変えるスポーツ教室
+    </p>
+    <div class="hero-text__cta-wrap">
+      <a href="https://liff-gateway.lineml.jp/landing?follow=%40495unzuf&lp=eZDkgE&liff_id=2005715454-1Bw8NW59" class="btn-primary" target="_blank" rel="noopener noreferrer">無料体験レッスンに申込む</a>
+      <a href="https://jpc-sports.com/bisai/corp-contact/" class="btn-secondary" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
+    </div>
+  </section>
+
+  <!-- NUMBERS -->
+  <section class="section">
+    <div style="text-align:center; margin-bottom: 32px;">
+      <span class="section__label">RESULTS</span>
+      <h2 class="section__title">JPCスポーツ教室が<br>選ばれる理由</h2>
+    </div>
+    <div class="numbers">
+      <div class="number-card">
+        <div class="number-card__num">1,000<span class="number-card__unit" style="font-size:18px;">+</span></div>
+        <div class="number-card__unit">名以上</div>
+        <div class="number-card__label">運動改善<br>サポート実績</div>
+      </div>
+      <div class="number-card">
+        <div class="number-card__num">約<span class="number-card__num" style="font-size: clamp(28px,7vw,44px);">80</span><span class="number-card__unit number-card__unit" style="font-size:18px; color:var(--blue);">%</span></div>
+        <div class="number-card__unit" style="color:var(--blue);">の方が入会</div>
+        <div class="number-card__label">体験レッスン後の<br>入会率</div>
+      </div>
+      <div class="number-card">
+        <div class="number-card__num">全<span style="font-size:clamp(28px,7vw,44px);">国</span></div>
+        <div class="number-card__unit" style="color:#CCA800;">展開中</div>
+        <div class="number-card__label">岐阜発・全国へ<br>広がる教室</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ICHIOSHO SERVICE -->
+  <section class="section section--gray">
+    <div style="text-align:center; margin-bottom: 32px;">
+      <span class="section__label">FEATURE</span>
+      <h2 class="section__title">JPCならではの<br>6つのこだわり</h2>
+      <p class="section__desc" style="margin: 0 auto;">子どもたちの「やってみたい！」を大切に、<br>楽しみながら本物の力が育つ環境をつくっています。</p>
+    </div>
+
+    <!-- ICHIOSHO HERO -->
+    <div class="service-hero" style="max-width:640px; margin: 0 auto 24px;">
+      <span class="service-hero__badge">イチオシ</span>
+      <h3 class="service-hero__title">身体のプロによる<br>専門的な個別サポート</h3>
+      <p class="service-hero__text">前職のリハビリ職で1,000名以上の運動改善をサポートしてきた「身体のプロ」のコーチが担当。一人ひとりの身体の使い方を丁寧に見極め、「できた！」の瞬間を増やします。</p>
+    </div>
+
+    <div class="service-cards" style="max-width:640px; margin: 0 auto;">
+      <div class="service-card">
+        <div class="service-card__icon">🏋️</div>
+        <div>
+          <div class="service-card__title">体幹に特化したトレーニング</div>
+          <p class="service-card__text">KOBA式体幹バランストレーニングで柔軟性・安定性・バランス・連動性を高め、あらゆるスポーツの土台をつくります。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">🤸</div>
+        <div>
+          <div class="service-card__title">「できた！」を増やす成功体験</div>
+          <p class="service-card__text">跳び箱・鉄棒などを遊び感覚で楽しみながら、運動への苦手意識を「大好き」や「得意」に変えるメニューを工夫しています。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">👨‍👩‍👧‍👦</div>
+        <div>
+          <div class="service-card__title">全世代対応のクラス展開</div>
+          <p class="service-card__text">園児から小学生・中学生、さらに大人向けインナーマッスル強化クラスまで、目的に合わせた幅広い指導を実施。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">🎪</div>
+        <div>
+          <div class="service-card__title">定期的なイベント開催</div>
+          <p class="service-card__text">「体操・体幹アスレチックDAY」など、会員以外も気軽に参加できるイベントを定期的に開催しています。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">✨</div>
+        <div>
+          <div class="service-card__title">安心の無料体験制度</div>
+          <p class="service-card__text">随時実施中の無料体験レッスンで、雰囲気や指導スタイルを実際に確かめてから入会できます。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">💪</div>
+        <div>
+          <div class="service-card__title">心・技・体のバランス教育</div>
+          <p class="service-card__text">技術だけでなく、成功体験を通じて挑戦する心・自立心・社会性など「人間力」の育成にも重点を置いています。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMING SOON -->
+    <div class="coming-soon" style="max-width:640px; margin: 24px auto 0;">
+      <span class="coming-soon__badge">準備中</span>
+      <p class="coming-soon__text">スポーツをする子の体づくりを食事面から支える<strong>保護者向け講座</strong>を準備中です。お楽しみに！</p>
+    </div>
+  </section>
+
+  <!-- STRENGTH -->
+  <section class="section">
+    <div style="text-align:center; margin-bottom: 32px;">
+      <span class="section__label">STRENGTH</span>
+      <h2 class="section__title">3つの強み</h2>
+    </div>
+    <div class="strength-list">
+      <div class="strength-item">
+        <div class="strength-item__icon">🔥</div>
+        <div>
+          <h3 class="strength-item__title">体幹特化型プログラム</h3>
+          <p class="strength-item__text">プロアスリートも採用するKOBA式体幹☆バランストレーニングを導入。姿勢・バランス能力を効率的に鍛え、あらゆるスポーツの土台を作ります。</p>
+        </div>
+      </div>
+      <div class="strength-item">
+        <div class="strength-item__icon">🩺</div>
+        <div>
+          <h3 class="strength-item__title">身体のプロによる専門指導</h3>
+          <p class="strength-item__text">リハビリ現場で1,000名以上の改善実績を持つ経験豊富なコーチが、個々の動きのクセを見極めて「できた！」を丁寧にサポートします。</p>
+        </div>
+      </div>
+      <div class="strength-item">
+        <div class="strength-item__icon">🌱</div>
+        <div>
+          <h3 class="strength-item__title">心・技・体のバランス教育</h3>
+          <p class="strength-item__text">単なる技術習得にとどまらず、クラスでの成功体験を通じて自分から挑戦する心や自立心、社会性といった人間力を育みます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="section section--gray">
+    <div style="text-align:center; margin-bottom: 32px;">
+      <span class="section__label">OUR STORY</span>
+      <h2 class="section__title">創業者の想い</h2>
+    </div>
+    <div class="story">
+      <p class="story__name">株式会社J-PRoach 代表取締役 髙木 宏昌</p>
+      <h3 class="story__title">「子ども達が楽しみながら<br>成長できる空間をつくりたい」</h3>
+      <p class="story__text">
+        4児の父である髙木宏昌が、わが子への想いをそのままカタチにしたのがJPCスポーツ教室です。「遊び」を通して体を動かしながら、考える力・コミュニケーション力を育む—子ども自身が成長を掴み取れる環境づくりにこだわり続けています。岐阜県羽島市から始まったその挑戦は、今や全国へと広がっています。
+      </p>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section">
+    <div style="text-align:center; margin-bottom: 32px;">
+      <span class="section__label">REVIEWS</span>
+      <h2 class="section__title">通われている方の声</h2>
+    </div>
+    <div class="review-cards">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">教室の前をよく通り子供と共に気になっており、タイミング良くフェスティバルに参加させていただきました。子供は色々な種目を体験して楽しそうで、アドバイスで少しずつ出来て行くのが実感できとても良かったです。</p>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">多分、最年少（3歳）ですが、「今日は教室ある？」と毎日聞かれるほど、楽しみに通っています！ 寝る前にベッドで「ぐるりんする！」と突然、でんぐり返しをしだして、通って3ヶ月しか経っていませんが、成果を感じました😂 いつも、ありがとうございます❣️</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FREE TRIAL CTA -->
+  <section class="trial-section">
+    <span class="trial-section__badge">随時受付中</span>
+    <h2 class="trial-section__title">まずは無料体験から<br>はじめてみませんか？</h2>
+    <p class="trial-section__sub">体験後に「入会したい！」と感じた方が約80%。<br>お子さまの「楽しい！」をぜひ体感してください。</p>
+    <a href="https://liff-gateway.lineml.jp/landing?follow=%40495unzuf&lp=eZDkgE&liff_id=2005715454-1Bw8NW59" class="trial-section__btn" target="_blank" rel="noopener noreferrer">
+      無料体験レッスンに申込む
+    </a>
+    <p class="trial-section__note">LINEから簡単にお申込みいただけます</p>
+  </section>
+
+  <!-- INFO -->
+  <section class="section section--gray">
+    <div style="text-align:center; margin-bottom: 32px;">
+      <span class="section__label">INFO</span>
+      <h2 class="section__title">教室情報</h2>
+    </div>
+    <div class="info-grid">
+      <div class="info-row">
+        <div class="info-row__label">教室名</div>
+        <div class="info-row__value">JPCスポーツ教室 一宮尾西店</div>
+      </div>
+      <div class="info-row">
+        <div class="info-row__label">住所</div>
+        <div class="info-row__value">〒494-0003<br>愛知県一宮市三条賀３８−２</div>
+      </div>
+      <div class="info-row">
+        <div class="info-row__label">公式HP</div>
+        <div class="info-row__value"><a href="https://jpc-sports.com/bisai/" target="_blank" rel="noopener noreferrer">jpc-sports.com/bisai/</a></div>
+      </div>
+      <div class="info-row">
+        <div class="info-row__label">お問合せ</div>
+        <div class="info-row__value"><a href="https://jpc-sports.com/bisai/corp-contact/" target="_blank" rel="noopener noreferrer">問い合わせフォームへ</a></div>
+      </div>
+      <div class="info-row">
+        <div class="info-row__label">運営会社</div>
+        <div class="info-row__value">株式会社J-PRoach</div>
+      </div>
+      <div class="info-row">
+        <div class="info-row__label">代表者</div>
+        <div class="info-row__value">髙木 宏昌</div>
+      </div>
+    </div>
+
+    <!-- SNS -->
+    <div class="sns-area">
+      <p class="sns-area__title">SNSでも情報発信中</p>
+      <div class="sns-icons">
+        <a href="https://www.instagram.com/jpc.sports_bisai/" target="_blank" rel="noopener noreferrer" class="sns-icon">
+          <!-- Instagram official icon SVG -->
+          <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="ig-grad" cx="30%" cy="105%" r="120%">
+                <stop offset="0%" stop-color="#FFD600"/>
+                <stop offset="25%" stop-color="#FF7A00"/>
+                <stop offset="50%" stop-color="#FF0069"/>
+                <stop offset="75%" stop-color="#D300C5"/>
+                <stop offset="100%" stop-color="#7638FA"/>
+              </radialGradient>
+            </defs>
+            <rect width="40" height="40" rx="10" fill="url(#ig-grad)"/>
+            <rect x="10" y="10" width="20" height="20" rx="6" stroke="white" stroke-width="2" fill="none"/>
+            <circle cx="20" cy="20" r="5" stroke="white" stroke-width="2" fill="none"/>
+            <circle cx="27" cy="13" r="1.5" fill="white"/>
+          </svg>
+          <span>Instagram</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="section">
+    <div style="text-align:center; margin-bottom: 32px;">
+      <span class="section__label">ACCESS</span>
+      <h2 class="section__title">アクセス</h2>
+    </div>
+    <div style="max-width:640px; margin: 0 auto;">
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3255.9312386232814!2d136.7609721!3d35.30769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003a792e4a818a1%3A0xe452c73eb09e6915!2zSlBD44K544Od44O844OE5pWZ5a6kIOS4gOWuruWwvuilv-W6lw!5e0!3m2!1sja!2sjp!4v1792730918719!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="JPCスポーツ教室 一宮尾西店 地図"></iframe>
+      </div>
+      <div class="map-btn-wrap">
+        <a href="https://www.google.com/maps/place/JPC%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84%E6%95%99%E5%AE%A4+%E4%B8%80%E5%AE%AE%E5%B0%BE%E8%A5%BF%E5%BA%97/@35.30769,136.7609721,17z/data=!3m1!4b1!4m6!3m5!1s0x6003a792e4a818a1:0xe452c73eb09e6915!8m2!3d35.30769!4d136.7609721!16s%2Fg%2F11jmcd1rxl?authuser=0&entry=ttu&g_ep=EgoyMDI2MTAxOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="btn-map">
+          📍 Googleマップで見る
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__logo">JPCスポーツ教室 一宮尾西店</div>
+    <div class="footer__official">
+      <a href="https://jpc-sports.com/bisai/" target="_blank" rel="noopener noreferrer">公式サイトはこちら</a>
+    </div>
+    <div class="footer__links">
+      <a href="https://jpc-sports.com/bisai/corp-contact/" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
+      <a href="https://liff-gateway.lineml.jp/landing?follow=%40495unzuf&lp=eZDkgE&liff_id=2005715454-1Bw8NW59" target="_blank" rel="noopener noreferrer">無料体験申込</a>
+      <a href="https://www.instagram.com/jpc.sports_bisai/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+    <p class="footer__copy">&copy; 2024 株式会社J-PRoach / JPCスポーツ教室 一宮尾西店</p>
+  </footer>
+
+  <!-- FLOATING CTA (mobile only) -->
+  <a href="https://liff-gateway.lineml.jp/landing?follow=%40495unzuf&lp=eZDkgE&liff_id=2005715454-1Bw8NW59" class="float-cta" target="_blank" rel="noopener noreferrer">
+    無料体験レッスンに申込む
+  </a>
+
+</body>
+</html>
